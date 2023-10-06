@@ -31,3 +31,21 @@ CREATE TABLE funcionario_backup (
 	nivel INT,
 	salario DECIMAL(10, 2)
 );
+
+-- adicionando a coluna para data de admissão na tabela funcionario
+ALTER TABLE funcionario
+ADD COLUMN data_admissao DATE;
+
+-- criacao de trigger para fazer backup dos dados deletados da tabela funcionario
+DELIMITER $
+
+CREATE TRIGGER BackupFuncionario
+AFTER DELETE ON funcionario
+FOR EACH ROW
+BEGIN
+	INSERT INTO funcionario_backup (idFuncionario, nome, sobrenome, cargo, nivel, salario, data_admissao)
+	VALUES (OLD.idFuncionario, OLD.nome, OLD.sobrenome, OLD.idCargo, OLD.idNivel, OLD.salario, OLD.data_admissao);
+END;
+$
+
+DELIMITER ;
