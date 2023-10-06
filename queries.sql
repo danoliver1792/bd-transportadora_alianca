@@ -1,3 +1,8 @@
+-- criando o banco
+CREATE DATABASE IF NOT EXISTS trans_alianca;
+
+USE trans_alianca;
+
 -- criando a tabela com os dados dos funcionarios
 CREATE TABLE funcionario (
 	idFuncionario INT PRIMARY KEY AUTO_INCREMENT,
