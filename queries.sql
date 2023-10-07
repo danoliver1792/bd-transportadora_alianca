@@ -58,3 +58,18 @@ END;
 $
 
 DELIMITER ;
+
+-- inserindo os cargos
+INSERT INTO cargo VALUES (1, "motorista");
+INSERT INTO cargo VALUES (2, "auxiliar de logistica");
+INSERT INTO cargo VALUES (3, "supervisor de logistica");
+INSERT INTO cargo VALUES (4, "gerente financeiro");
+INSERT INTO cargo VALUES (5, "auxiliar administrativo");
+INSERT INTO cargo VALUES (6, "auxiliar de servicos gerais");
+INSERT INTO cargo VALUES (7, "motoboy");
+INSERT INTO cargo VALUES (8, "recursos humanos");
+
+-- inserindo niveis
+INSERT INTO nivel VALUES (1, "junior");
+INSERT INTO nivel VALUES (2, "pleno");
+INSERT INTO nivel VALUES (3, "senior");
