@@ -101,3 +101,48 @@ BEGIN
 	WHERE idCargo = 2;
 END;
 $
+
+-- supervisor de logistica
+CREATE PROCEDURE SupLog()
+BEGIN
+	SELECT * FROM funcionario
+	WHERE idCargo = 3;
+END;
+$
+
+-- gerente financeiro
+CREATE PROCEDURE Financeiro()
+BEGIN
+	SELECT * FROM funcionario
+	WHERE idCargo = 4;
+END;
+$
+
+CREATE PROCEDURE AuxAdm()
+BEGIN
+	SELECT * FROM funcionario
+	WHERE idCargo = 5;
+END;
+$
+
+CREATE PROCEDURE AuxSer()
+BEGIN
+	SELECT * FROM funcionario
+	WHERE idCargo = 6;
+END;
+$
+
+CREATE PROCEDURE motoboy()
+BEGIN
+	SELECT * FROM funcionario
+	WHERE idCargo = 7;
+END;
+$
+
+CREATE PROCEDURE Rh()
+BEGIN
+	SELECT * FROM funcionario
+	WHERE idCargo = 8;
+END;
+$
+
