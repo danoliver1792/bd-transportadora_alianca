@@ -41,6 +41,10 @@ CREATE TABLE funcionario_backup (
 ALTER TABLE funcionario
 ADD COLUMN data_admissao DATE;
 
+-- alterando o tipo da coluna data_admissao
+ALTER TABLE funcionario
+MODIFY COLUMN data_admissao DATE NOT NULL;
+
 -- criacao de trigger para fazer backup dos dados deletados da tabela funcionario
 DELIMITER $
 
