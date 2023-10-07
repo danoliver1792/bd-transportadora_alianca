@@ -73,3 +73,31 @@ INSERT INTO cargo VALUES (8, "recursos humanos");
 INSERT INTO nivel VALUES (1, "junior");
 INSERT INTO nivel VALUES (2, "pleno");
 INSERT INTO nivel VALUES (3, "senior");
+
+-- inserindo os dados dos funcionarios
+INSERT INTO funcionario VALUES (1, "Maria", "Antonia", 6, 2, 1200, "2022-02-21");
+INSERT INTO funcionario VALUES (NULL, "Eduardo", "Brandao", 1, 2, 2500, "2021-08-14");
+INSERT INTO funcionario VALUES (NULL, "Julio", "Magalhaes", 1, 3, 4500, "2018-05-15");
+INSERT INTO funcionario VALUES (NULL, "Carlos", "Carvalho", 1, 2, 2500, "2020-06-09");
+INSERT INTO funcionario VALUES (NULL, "Fatima", "Azevedo", 1, 3, 4500, "2017-01-23");
+INSERT INTO funcionario VALUES (NULL, "Joice", "Camila", 4, 3, 3500, "2019-08-17");
+INSERT INTO funcionario VALUES (NULL, "Carla", "Nascimento", 5, 2, 2500, "2020-04-06");
+
+-- procedures de busca
+DELIMITER $
+
+-- motoristas
+CREATE PROCEDURE Motoristas()
+BEGIN
+	SELECT * FROM funcionario
+	WHERE idCargo = 1;
+END;
+$
+
+-- auxiliar de logistica
+CREATE PROCEDURE AuxLog()
+BEGIN
+	SELECT * FROM funcionario
+	WHERE idCargo = 2;
+END;
+$
